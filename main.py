@@ -10,15 +10,20 @@ def matching_words(sent1, sent2):
     return score
 
 
-if __name__ == '__main__':
-    sentences = ["Python is a good language", "Python is not a snake",
-                 "Sarfaraz is a good boy", "Python is my new lover"]
+if __name__ == "__main__":
+    sentences = [
+        "Python is a good language",
+        "Python is not a snake",
+        "Sarfaraz is a good boy",
+        "Python is my new lover",
+    ]
 
     query = input("Please enter the query string\n")
 
     scores = [matching_words(query, sentence) for sentence in sentences]
-    sorted_sent_score = [sent_score for sent_score in sorted(
-        zip(scores, sentences), reverse=True)]
+    sorted_sent_score = [
+        sent_score for sent_score in sorted(zip(scores, sentences), reverse=True)
+    ]
     print(f"{len(sorted_sent_score)} results found!")
     for score, item in sorted_sent_score:
-        print(f"\"{item}\" with a score of {score}")
+        print(f'"{item}" with a score of {score}')
