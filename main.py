@@ -1,4 +1,5 @@
-def matchingWords(sent1, sent2):
+# Function to return score of matched words in the query sentence and array of sentences
+def matching_words(sent1, sent2):
     words1 = sent1.split(" ")
     words2 = sent2.split(" ")
     score = 0
@@ -15,9 +16,9 @@ if __name__ == '__main__':
 
     query = input("Please enter the query string\n")
 
-    scores = [matchingWords(query, sentence) for sentence in sentences]
-    sortedSentScore = [sentScore for sentScore in sorted(
+    scores = [matching_words(query, sentence) for sentence in sentences]
+    sorted_sent_score = [sent_score for sent_score in sorted(
         zip(scores, sentences), reverse=True)]
-    print(f"{len(sortedSentScore)} results found!")
-    for score, item in sortedSentScore:
+    print(f"{len(sorted_sent_score)} results found!")
+    for score, item in sorted_sent_score:
         print(f"\"{item}\" with a score of {score}")
