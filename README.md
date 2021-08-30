@@ -1,4 +1,4 @@
-# Search Engine (Exercise)
+# Search Engine (Exercise) [![CodeFactor](https://www.codefactor.io/repository/github/googoldkhan/search-engine/badge)](https://www.codefactor.io/repository/github/googoldkhan/search-engine)
 
 * This program matches the entered query string with a list of sentences and then shows the result score to the user.
 
